@@ -1,0 +1,40 @@
+MATCH (subject_id)-[:hadm_id]->(hadm_id) WHERE hadm_id.language = "hait" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id) WHERE hadm_id.religion = "christian scientist" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id) WHERE hadm_id.ethnicity = "white - russian" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id) WHERE hadm_id.diagnosis = "liver transplant" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id) WHERE hadm_id.diagnosis = "aortic insufficiency re-do sternotomy; aortic valve replacement " RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id) WHERE hadm_id.diagnosis = "celo-vessicle fistula" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id) WHERE hadm_id.age < 45 RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id) WHERE subject_id.dob_year < 2180 RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id) WHERE subject_id.dob_year < 2031 RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id) WHERE subject_id.dod_year <= 2183.0 RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id) WHERE hadm_id.admityear < 2174 RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->({uri: 'diagnoses_icd9_code/2768'}) RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->({uri: 'diagnoses_icd9_code/7702'}) RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->({uri: 'diagnoses_icd9_code/34831'}) RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->({uri: 'diagnoses_icd9_code/e8791'}) RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->({uri: 'diagnoses_icd9_code/28803'}) RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->({uri: 'diagnoses_icd9_code/45620'}) RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->({uri: 'diagnoses_icd9_code/27801'}) RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->({uri: 'diagnoses_icd9_code/5856'}) RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->({uri: 'diagnoses_icd9_code/75261'}) RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->({uri: 'diagnoses_icd9_code/e8788'}) RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->(diagnoses_icd9_code) WHERE diagnoses_icd9_code.diagnoses_short_title = "enterococcus group d" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->(diagnoses_icd9_code) WHERE diagnoses_icd9_code.diagnoses_short_title = "ath ext ntv at w claudct" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->(diagnoses_icd9_code) WHERE diagnoses_icd9_code.diagnoses_short_title = "malig neo ascend colon" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->(diagnoses_icd9_code) WHERE diagnoses_icd9_code.diagnoses_short_title = "wegener's granulomatosis" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->(diagnoses_icd9_code) WHERE diagnoses_icd9_code.diagnoses_short_title = "enthesopathy of hip" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->(diagnoses_icd9_code) WHERE diagnoses_icd9_code.diagnoses_short_title = "abn react-procedure nos" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->(diagnoses_icd9_code) WHERE diagnoses_icd9_code.diagnoses_short_title = "status autm crd dfbrltr" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->(diagnoses_icd9_code) WHERE diagnoses_icd9_code.diagnoses_short_title = "hy kid nos w cr kid i-iv" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->(diagnoses_icd9_code) WHERE diagnoses_icd9_code.diagnoses_short_title = "b-complex defic nec" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->(diagnoses_icd9_code) WHERE diagnoses_icd9_code.diagnoses_short_title = "peritonitis nos" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->(diagnoses_icd9_code) WHERE diagnoses_icd9_code.diagnoses_short_title = "malnutrition mild degree" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->(diagnoses_icd9_code) WHERE diagnoses_icd9_code.diagnoses_short_title = "dmi neuro nt st uncntrld" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->(diagnoses_icd9_code) WHERE diagnoses_icd9_code.diagnoses_long_title = "other anomalies of larynx, trachea, and bronchus" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->(diagnoses_icd9_code) WHERE diagnoses_icd9_code.diagnoses_long_title = "other and unspecified coagulation defects" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->(diagnoses_icd9_code) WHERE diagnoses_icd9_code.diagnoses_long_title = "seroma complicating a procedure" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->(diagnoses_icd9_code) WHERE diagnoses_icd9_code.diagnoses_long_title = "anemia in chronic kidney disease" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->(diagnoses_icd9_code) WHERE diagnoses_icd9_code.diagnoses_long_title = "benign neoplasm of spinal meninges" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->(diagnoses_icd9_code) WHERE diagnoses_icd9_code.diagnoses_long_title = "personal history of venous thrombosis and embolism" RETURN COUNT(DISTINCT subject_id) as agg
+MATCH (subject_id)-[:hadm_id]->(hadm_id)-[:diagnoses]->(diagnoses)-[:diagnoses_icd9_code]->(diagnoses_icd9_code) WHERE diagnoses_icd9_code.diagnoses_long_title = "other drugs and medicinal substances causing adverse effects in therapeutic use" RETURN COUNT(DISTINCT subject_id) as agg
