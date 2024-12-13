@@ -15,6 +15,7 @@ In build_{complex|simple}_kg_mimic4.py, modify the paths to the MIMIC-IV SQLITE 
 **Step 4: Run evaluation of AI query generation**
 
 Go through query_eval.ipynb and run the cells iteratively. This also requires an Azure key that we cannot post publicly.
+To run the RDF performance tests, run python perf/kg.py and download the results to a file of your choice. To run the Neo4j tests, Run python kg_neo4j.py. Note: This requires a database connection to neo4j with the database loaded with the data. The notebook temp.ipynb contains the code to generate our performance plots.
 
 **Step 5: Discharge Summary Keyword Extraction and Hallucination Reduction**
 
